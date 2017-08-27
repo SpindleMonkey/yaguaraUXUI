@@ -17,12 +17,12 @@ Subscriptions: Starter Plan
 
 
 # Sample Screenshots from Yaguara
-(Screen shot 1)[assets/Screen Shot 2017-08-25 at 3.40.52 PM.png]
-(Screen shot 2)[assets/Screen Shot 2017-08-25 at 3.41.03 PM.png]
-(Screen shot 3)[assets/Screen Shot 2017-08-25 at 3.41.12 PM.png]
-(Screen shot 4)[assets/Screen Shot 2017-08-25 at 3.41.20 PM.png]
-(Screen shot 5)[assets/Screen Shot 2017-08-25 at 3.52.22 PM.png]
-(Screen shot 6)[assets/Screen Shot 2017-08-25 at 3.52.27 PM.png]
+[Screen shot 1](assets/Screen Shot 2017-08-25 at 3.40.52 PM.png)
+[Screen shot 2](assets/Screen Shot 2017-08-25 at 3.41.03 PM.png)
+[Screen shot 3](assets/Screen Shot 2017-08-25 at 3.41.12 PM.png)
+[Screen shot 4](assets/Screen Shot 2017-08-25 at 3.41.20 PM.png)
+[Screen shot 5](assets/Screen Shot 2017-08-25 at 3.52.22 PM.png)
+[Screen shot 6](assets/Screen Shot 2017-08-25 at 3.52.27 PM.png)
 
 
 # Yaguara project info
