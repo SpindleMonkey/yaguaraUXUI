@@ -1,0 +1,202 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="css/style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+    <div class="container center-align">
+    <button data-target="createModal" class="btn modal-trigger btn-large teal white-text">Create A Goal</button>
+    </div>
+
+  <!-- Modal Structure -->
+  <div id="createModal" class="modal">
+    <div class="modal-content center-align">
+      <div id="goal">
+      <h6>CREATE A GOAL</h6>
+      </div>
+      <div id="bar">
+      <img src="progress.gif">
+      </div>
+      <div id="start">
+      <h5>Let's get started</h5>
+      </div>
+      <div id="date">
+      <a id="dateButton" class="btn white"><i class="material-icons left">date_range</i>Set a Start and End date</a>
+     </div>
+      <div id="data">
+      <a id="dataButton" class="btn white"> <i class="small material-icons left">add</i>Add a Data Source</a>
+      </div>
+       <div id="target">
+       <input type="text" placeholder="Enter Target Amount">
+       </div>
+       <div id="nextButton">
+       <button id="next" data-target="createModal" class="btn modal-trigger grey darken-3 white-text">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNext&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+       </div>
+    </div>
+  </div>
+    <!-- Modal Structure for Calendar-->
+  <div id="calendar" class="modal">
+    <div class="modal-content">
+      <h4 id="startDate">Pick a Start Date</h4>
+    </div>
+    <i class="material-icons left">arrow_back</i>
+    <i class="material-icons right">arrow_forward</i>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card small blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">August</span>
+      <table class="striped">
+        <thead>
+          <tr>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>S</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card small blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">September</span>
+      <table class="striped">
+        <thead>
+          <tr>
+              <th>S</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>S</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+            </div>
+          </div>
+        </div>
+
+  <!-- Modal Structure for Filters -->
+  <div id="filterModal" class="modal">
+    <div class="modal-content">
+      <h4>Filters</h4>
+      <p>A bunch of text</p>
+    </div>
+  </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/modal.js"></script>
+    </body>
+  </html>

@@ -1,0 +1,42 @@
+.container {
+	margin: 100px auto;
+}
+
+h6 {
+	font-weight: bold;
+}
+
+.btn, .btn-large, .btn-flat {
+	text-transform: none;
+	color: grey;
+}
+
+.modal {
+	background-color: white;
+}
+
+#date {
+	margin: 50px auto;
+}
+
+#data {
+	margin: 50px auto;
+}
+
+#next {
+	border-radius: 25px;
+}
+
+#target {
+	width: 50%;
+	margin: 30px auto;
+} 
+
+input {
+	text-align: center;
+}
+
+#quick {
+	font-size: 20px;
+	margin: 0 10px;
+}
