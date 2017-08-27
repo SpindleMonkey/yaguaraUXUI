@@ -1,38 +1,46 @@
 $(document).ready(function(){
-var toggleData = true;
-var toggleDate = true;
+
+    var toggleData = true;
+    var toggleDate = true;
 
     $('#createModal').modal();
-       $('#createModal').modal('close');
+    $('#createModal').modal('close');
     
+    $('#calendar').modal();
+    $('#calendar').modal('close');
+
+    $('#filterModal').modal();
+    $('filterModal').modal('close');
+
     $('#createModal').on('click', function(event) {
+    //$(document).on('click', '#createModal', function(event) {
     	$('#createModal').modal('open');
+        console.log('createModal clicked');
     });
 
-    $('#calendar').modal();
-    	$('#calendar').modal('close');
-
     $('#dateButton').on('click', function(event) {
+    //$(document).on('click', '#dateButton', function(event) {
+        console.log('dateButton clicked');
     	$('#calendar').modal('open');
     });
 
-    // $('#undo').on('click', function(event) {
-    $(document).on('click', '#undo', function(event) {
+    $('#undo').on('click', function(event) {
+    //$(document).on('click', '#undo', function(event) {
+        console.log('undo clicked');
     	$('#data').empty();
     	$('#data').append('<i class="small material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">payment</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">account_balance</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">dashboard</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">trending_up</i>');
     	toggleData = false;
     });
 
-    $('#filterModal').modal();
-    	$('filterModal').modal('close');
-
-    	// $('#filter').on('click', function(event) {
-    		$(document).on('click', '#filterIcon', function(event) {
-    		$('filterModal').modal('open');
-    	});
-
+    $('#filter').on('click', function(event) {
+    //$(document).on('click', '#filterIcon', function(event) {
+        console.log('filter clicked');
+    	$('filterModal').modal('open');
+    });
 
     $('#data').on('click', function(event) {
+    //$(document).on('click', '#data', function(event) {
+        console.log('data clicked');
     	if (toggleData) {
     		$('#data').empty();
     		$('#data').append('<i class="small material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">payment</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">account_balance</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">dashboard</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">trending_up</i>');
@@ -46,7 +54,10 @@ var toggleDate = true;
     		toggleData = true;
     	}
     });
+
     $('.row').on('click', function(event) {
+    //$(document).on('click', '.row', function(event) {
+        console.log('row clicked');
     	$('#startDate').empty();
     	$('#startDate').text('Pick an End Date');
     });
