@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    var toggleData = true;
-    var toggleDate = true;
+    var srcStates = [ 1, 2, 1, 2, 3 ];
+    var currentState = 0;
 
     $('#createModal').modal();
     $('#createModal').modal('close');
@@ -12,54 +12,58 @@ $(document).ready(function(){
     $('#filterModal').modal();
     $('filterModal').modal('close');
 
-    $('#createModal').on('click', function(event) {
-    //$(document).on('click', '#createModal', function(event) {
+    $('#createbutton').on('click', function(event) {
+        console.log('createButton clicked');
+        console.log(event);
     	$('#createModal').modal('open');
-        console.log('createModal clicked');
     });
 
     $('#dateButton').on('click', function(event) {
-    //$(document).on('click', '#dateButton', function(event) {
         console.log('dateButton clicked');
+        console.log(event);
     	$('#calendar').modal('open');
     });
 
-    $('#undo').on('click', function(event) {
-    //$(document).on('click', '#undo', function(event) {
-        console.log('undo clicked');
-    	$('#data').empty();
-    	$('#data').append('<i class="small material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">payment</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">account_balance</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">dashboard</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">trending_up</i>');
-    	toggleData = false;
-    });
-
-    $('#filter').on('click', function(event) {
-    //$(document).on('click', '#filterIcon', function(event) {
-        console.log('filter clicked');
-    	$('filterModal').modal('open');
-    });
-
     $('#data').on('click', function(event) {
-    //$(document).on('click', '#data', function(event) {
-        console.log('data clicked');
-    	if (toggleData) {
-    		$('#data').empty();
-    		$('#data').append('<i class="small material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">payment</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">account_balance</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">dashboard</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">trending_up</i>');
-    		toggleData = false;
-    	}
-    	else {
-    		$('#data').empty();
-    		$('#data').append('<i id="undo" class="small material-icons">undo</i>');
-    		$('#data').append("<span id='quick'>QuickBooks</span>");
-    		$('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
-    		toggleData = true;
-    	}
+        console.log('data clicked, state: ' + srcStates[currentState]);
+        console.log('currentState: ' + currentState);
+        //console.log(event);
+        switch (srcStates[currentState]) {
+            case 1:
+                // show all of the data sources
+                $('#data').empty();
+                $('#data').append('<i class="small material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">payment</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">account_balance</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">dashboard</i>&nbsp;&nbsp;&nbsp;<i class="small material-icons">trending_up</i>');
+                currentState++;
+                break;
+
+            case 2:
+                // show the selected/hard-coded data src
+                $('#data').empty();
+                $('#data').append('<i id="undo" class="small material-icons">undo</i>');
+                $('#data').append("<span id='quick'>QuickBooks</span>");
+                $('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
+                currentState++;
+                break;
+
+            case 3:
+                // show the filter page
+                $('#filterModal').modal('open');
+                currentState++;
+                break;
+
+            default:
+                // start over
+                $('#data').empty();
+                $('#data').append('<a id="dataButton" class="btn white"> <i class="small material-icons left">add</i>Add a Data Source</a>');
+                currentState = 0;
+        }
     });
 
     $('.row').on('click', function(event) {
-    //$(document).on('click', '.row', function(event) {
         console.log('row clicked');
+        console.log(event);
     	$('#startDate').empty();
-    	$('#startDate').text('Pick an End Date');
+    	$('#startDate').text('Select an End Date');
     });
 });
 

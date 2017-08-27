@@ -14,7 +14,10 @@
 
   <body>
     <div class="container center-align">
+    <!--
       <button data-target="createModal" class="btn modal-trigger btn-large teal white-text">Create A Goal</button>
+    -->
+      <a href="#createModal" id="createButton" class="btn-large modal-trigger teal white-text">Create A Goal</a>
     </div>
 
   <!-- Modal Structure for goal creation -->
@@ -30,7 +33,7 @@
         <h5>Let's get started</h5>
       </div>
       <div id="date">
-        <a id="dateButton" class="btn white"><i class="material-icons left">date_range</i>Set a Start and End date</a>
+        <a href="#calendar" id="dateButton" class="modal-trigger btn white"><i class="material-icons left">date_range</i>Set a Start and End date</a>
       </div>
       <div id="data">
         <a id="dataButton" class="btn white"> <i class="small material-icons left">add</i>Add a Data Source</a>
@@ -47,7 +50,7 @@
     <!-- Modal Structure for Calendar-->
   <div id="calendar" class="modal">
     <div class="modal-content">
-      <h4 id="startDate">Pick a Start Date</h4>
+      <h4 id="startDate">Select a Start Date</h4>
     </div>
     <i class="material-icons left">arrow_back</i>
     <i class="material-icons right">arrow_forward</i>
@@ -96,7 +99,7 @@
     <!-- Modal Structure for Filters -->
     <div id="filterModal" class="modal">
       <div class="modal-content">
-        <h4>Filters</h4>
+        <h4>Select Filters</h4>
         <p>A bunch of text</p>
       </div>
     </div>
