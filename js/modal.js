@@ -12,30 +12,21 @@ $(document).ready(function(){
     $('#calendar').modal();
     $('#calendar').modal('close');
 
-    // $('#filterModal').modal();
-    // $('filterModal').modal('close');
-
     $('#createbutton').on('click', function(event) {
-        console.log('createButton clicked');
-        console.log(event);
+        // console.log('createButton clicked');
+        // console.log(event);
     	$('#createModal').modal('open');
     });
 
     $('#dateButton').on('click', function(event) {
-        console.log('dateButton clicked');
-        console.log(event);
+        // console.log('dateButton clicked');
+        // console.log(event);
     	$('#calendar').modal('open');
     });
 
-    // $('#filterButton').on('click', function(event) {
-    //     console.log('filterButton clicked');
-    //     console.log(event);
-    //     $('#filterModal').modal('open');
-    // });
-
     $('#data').on('click', function(event) {
-        console.log('data clicked, state: ' + srcStates[currentState]);
-        console.log('currentState: ' + currentState);
+        // console.log('data clicked, state: ' + srcStates[currentState]);
+        // console.log('currentState: ' + currentState);
         //console.log(event);
         switch (srcStates[currentState]) {
             case 1:
@@ -50,7 +41,6 @@ $(document).ready(function(){
                 $('#data').empty();
                 $('#data').append('<i id="undo" class="small material-icons">undo</i>');
                 $('#data').append("<span id='quick'>QuickBooks</span>");
-                //$('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
                 currentState++;
                 break;
 
@@ -63,15 +53,14 @@ $(document).ready(function(){
     });
 
     $('#filter').on('click', function(event) {
-        console.log('filter clicked, state: ' + filterStates[currentFilterState]);
-        console.log('currentFilterState: ' + currentFilterState);
+        // console.log('filter clicked, state: ' + filterStates[currentFilterState]);
+        // console.log('currentFilterState: ' + currentFilterState);
         switch (filterStates[currentFilterState]) {
             case 1:
                 // show all the canned filters
                 $('#filter').empty();
                 $('#filter').append('<div class="half"><input type="text" placeholder="Account"></div>');
                 $('#filter').append('<div class="half"><input type="text" placeholder="Metric"></div>');
-                //$('#filter').append('<div class="half"><input type="text" placeholder="Account"><input type="text" placeholder="Metric"></div>');
                 currentFilterState++;
                 break;
 
@@ -79,8 +68,7 @@ $(document).ready(function(){
                 // show the selected/hard-coded filters
                 $('#filter').empty();
                 $('#filter').append('<i id="undo" class="small material-icons">undo</i>');
-                $('#filter').append("<span id='quick'>Revenue: Spotify</span>");
-                //$('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
+                $('#filter').append("<span id='quick'>Spotify: Revenue</span>");
                 currentFilterState++;
                 break;
 
@@ -93,8 +81,8 @@ $(document).ready(function(){
     });
 
     $('.row').on('click', function(event) {
-        console.log('row clicked');
-        console.log(event);
+        // console.log('row clicked');
+        // console.log(event);
     	$('#startDate').empty();
     	$('#startDate').text('Select an End Date');
     });
