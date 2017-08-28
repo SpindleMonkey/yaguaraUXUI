@@ -35,3 +35,11 @@ Subscriptions: Starter Plan
 * Jeremy Verdolino
 * Connie Kephart
 
+
+#Alternatives
+
+1. The select a date view would show 4 months at a time. Ideally broken up into quarters for easier selecting without all the clicks. 
+	b. If not 4 months, we would really like to show the entire year. Once you click on the month it explodes up to show the entire month you selected. 
+
+2. As for the filters. It would depend on the actually filters. If it is more than two, we recommend a whole other modal to show all the different filters that you could select from. This would make it look cleaner and fit all on one page.
+
