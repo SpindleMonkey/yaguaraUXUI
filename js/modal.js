@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
-    var srcStates = [ 1, 2, 1, 2, 3 ];
+    var srcStates = [ 1, 2, 1, 2 ];
     var currentState = 0;
+
+    var filterStates = [ 1, 2 ];
+    var currentFilterState = 0;
 
     $('#createModal').modal();
     $('#createModal').modal('close');
@@ -9,8 +12,8 @@ $(document).ready(function(){
     $('#calendar').modal();
     $('#calendar').modal('close');
 
-    $('#filterModal').modal();
-    $('filterModal').modal('close');
+    // $('#filterModal').modal();
+    // $('filterModal').modal('close');
 
     $('#createbutton').on('click', function(event) {
         console.log('createButton clicked');
@@ -23,6 +26,12 @@ $(document).ready(function(){
         console.log(event);
     	$('#calendar').modal('open');
     });
+
+    // $('#filterButton').on('click', function(event) {
+    //     console.log('filterButton clicked');
+    //     console.log(event);
+    //     $('#filterModal').modal('open');
+    // });
 
     $('#data').on('click', function(event) {
         console.log('data clicked, state: ' + srcStates[currentState]);
@@ -41,13 +50,7 @@ $(document).ready(function(){
                 $('#data').empty();
                 $('#data').append('<i id="undo" class="small material-icons">undo</i>');
                 $('#data').append("<span id='quick'>QuickBooks</span>");
-                $('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
-                currentState++;
-                break;
-
-            case 3:
-                // show the filter page
-                $('#filterModal').modal('open');
+                //$('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
                 currentState++;
                 break;
 
@@ -56,6 +59,36 @@ $(document).ready(function(){
                 $('#data').empty();
                 $('#data').append('<a id="dataButton" class="btn white"> <i class="small material-icons left">add</i>Add a Data Source</a>');
                 currentState = 0;
+        }
+    });
+
+    $('#filter').on('click', function(event) {
+        console.log('filter clicked, state: ' + filterStates[currentFilterState]);
+        console.log('currentFilterState: ' + currentFilterState);
+        switch (filterStates[currentFilterState]) {
+            case 1:
+                // show all the canned filters
+                $('#filter').empty();
+                $('#filter').append('<div class="half"><input type="text" placeholder="Account"></div>');
+                $('#filter').append('<div class="half"><input type="text" placeholder="Metric"></div>');
+                //$('#filter').append('<div class="half"><input type="text" placeholder="Account"><input type="text" placeholder="Metric"></div>');
+                currentFilterState++;
+                break;
+
+            case 2:
+                // show the selected/hard-coded filters
+                $('#filter').empty();
+                $('#filter').append('<i id="undo" class="small material-icons">undo</i>');
+                $('#filter').append("<span id='quick'>Revenue: Spotify</span>");
+                //$('#data').append('<i id="filterIcon" class="small material-icons">filter_list</i>');
+                currentFilterState++;
+                break;
+
+            default:
+                // start over
+                $('#filter').empty();
+                $('#filter').append('<a id="filterButton" class="btn white"> <i class="small material-icons left">filter_list</i>Filter Data Source</a>');
+                currentFilterState = 0;
         }
     });
 

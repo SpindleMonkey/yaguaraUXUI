@@ -1,3 +1,11 @@
+/*html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
 .container {
 	margin: 100px auto;
 }
@@ -15,12 +23,26 @@ h6 {
 	background-color: white;
 }
 
+#start {
+	margin: 10px auto;
+}
+
 #date {
-	margin: 50px auto;
+	margin: 30px auto;
 }
 
 #data {
-	margin: 50px auto;
+	margin: 30px auto;
+}
+
+#filter {
+	margin: 10px auto 20px auto;
+}
+
+.half {
+	display: inline-block;
+	margin: 0 auto;
+	width: 50%;
 }
 
 #next {
@@ -29,12 +51,16 @@ h6 {
 }
 
 #target {
+	margin: 30px auto 20px auto;
 	width: 50%;
-	margin: 30px auto;
 } 
 
-input {
+input{
 	text-align: center;
+}
+
+input[type=text]:not(.browser-default) {
+	margin: 0;
 }
 
 #quick {
